@@ -32,6 +32,8 @@
 		CE0E9F0C1FEA425900CEF8EE /* Unavailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9F0B1FEA425900CEF8EE /* Unavailable.swift */; };
 		CE0E9F0F1FEA488A00CEF8EE /* TestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9F0E1FEA488A00CEF8EE /* TestRequest.swift */; };
 		CE0E9F151FEA502A00CEF8EE /* JSONBodyParametersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9F141FEA502A00CEF8EE /* JSONBodyParametersTests.swift */; };
+		CE0E9F181FEA667A00CEF8EE /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6260341FEA07A300E143C7 /* APIKit.framework */; };
+		CE0E9F191FEA667A00CEF8EE /* APIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE6260341FEA07A300E143C7 /* APIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE62603D1FEA07A300E143C7 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6260341FEA07A300E143C7 /* APIKit.framework */; };
 		CE6260441FEA07A300E143C7 /* APIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6260431FEA07A300E143C7 /* APIKitTests.swift */; };
 		CE6260461FEA07A300E143C7 /* APIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6260361FEA07A300E143C7 /* APIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,6 +47,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CE0E9F1A1FEA667A00CEF8EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE7679FD1FE9F9FB0000B5BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE6260331FEA07A300E143C7;
+			remoteInfo = APIKit;
+		};
 		CE62603E1FEA07A300E143C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CE7679FD1FE9F9FB0000B5BC /* Project object */;
@@ -74,6 +83,20 @@
 			remoteInfo = "Transcription-APIKit";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE0E9F1C1FEA667C00CEF8EE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CE0E9F191FEA667A00CEF8EE /* APIKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CE0E9EDA1FEA177E00CEF8EE /* CallbackQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackQueue.swift; sourceTree = "<group>"; };
@@ -143,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0E9F181FEA667A00CEF8EE /* APIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,10 +408,12 @@
 				CE767A021FE9F9FB0000B5BC /* Frameworks */,
 				CE767A031FE9F9FB0000B5BC /* Resources */,
 				CE6260521FEA09E900E143C7 /* ShellScript */,
+				CE0E9F1C1FEA667C00CEF8EE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CE0E9F1B1FEA667A00CEF8EE /* PBXTargetDependency */,
 			);
 			name = "Transcription-APIKit";
 			productName = "Transcription-APIKit";
@@ -557,7 +583,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -628,6 +653,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CE0E9F1B1FEA667A00CEF8EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE6260331FEA07A300E143C7 /* APIKit */;
+			targetProxy = CE0E9F1A1FEA667A00CEF8EE /* PBXContainerItemProxy */;
+		};
 		CE62603F1FEA07A300E143C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CE6260331FEA07A300E143C7 /* APIKit */;
@@ -879,6 +909,7 @@
 		CE767A2E1FE9F9FC0000B5BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -900,6 +931,7 @@
 		CE767A2F1FE9F9FC0000B5BC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
