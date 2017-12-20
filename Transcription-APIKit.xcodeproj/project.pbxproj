@@ -22,6 +22,9 @@
 		CE0E9EF61FEA299200CEF8EE /* FormURLEncodeDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9EF51FEA299200CEF8EE /* FormURLEncodeDataParser.swift */; };
 		CE0E9EF81FEA2B4900CEF8EE /* ProtobufDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9EF71FEA2B4900CEF8EE /* ProtobufDataParser.swift */; };
 		CE0E9EFB1FEA2B9C00CEF8EE /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9EFA1FEA2B9C00CEF8EE /* RequestError.swift */; };
+		CE0E9EFD1FEA2D9000CEF8EE /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9EFC1FEA2D9000CEF8EE /* ResponseError.swift */; };
+		CE0E9F001FEA2EAD00CEF8EE /* URLEncodeedSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9EFF1FEA2EAD00CEF8EE /* URLEncodeedSerialization.swift */; };
+		CE0E9F021FEA340600CEF8EE /* SessionTaskError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9F011FEA340600CEF8EE /* SessionTaskError.swift */; };
 		CE62603D1FEA07A300E143C7 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6260341FEA07A300E143C7 /* APIKit.framework */; };
 		CE6260441FEA07A300E143C7 /* APIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6260431FEA07A300E143C7 /* APIKitTests.swift */; };
 		CE6260461FEA07A300E143C7 /* APIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6260361FEA07A300E143C7 /* APIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -104,6 +107,9 @@
 		CE0E9EF51FEA299200CEF8EE /* FormURLEncodeDataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormURLEncodeDataParser.swift; sourceTree = "<group>"; };
 		CE0E9EF71FEA2B4900CEF8EE /* ProtobufDataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufDataParser.swift; sourceTree = "<group>"; };
 		CE0E9EFA1FEA2B9C00CEF8EE /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		CE0E9EFC1FEA2D9000CEF8EE /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
+		CE0E9EFF1FEA2EAD00CEF8EE /* URLEncodeedSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEncodeedSerialization.swift; sourceTree = "<group>"; };
+		CE0E9F011FEA340600CEF8EE /* SessionTaskError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTaskError.swift; sourceTree = "<group>"; };
 		CE6260341FEA07A300E143C7 /* APIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = APIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6260361FEA07A300E143C7 /* APIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKit.h; sourceTree = "<group>"; };
 		CE6260371FEA07A300E143C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -197,13 +203,24 @@
 			isa = PBXGroup;
 			children = (
 				CE0E9EFA1FEA2B9C00CEF8EE /* RequestError.swift */,
+				CE0E9EFC1FEA2D9000CEF8EE /* ResponseError.swift */,
+				CE0E9F011FEA340600CEF8EE /* SessionTaskError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		CE0E9EFE1FEA2E9600CEF8EE /* Serializations */ = {
+			isa = PBXGroup;
+			children = (
+				CE0E9EFF1FEA2EAD00CEF8EE /* URLEncodeedSerialization.swift */,
+			);
+			path = Serializations;
 			sourceTree = "<group>";
 		};
 		CE6260351FEA07A300E143C7 /* APIKit */ = {
 			isa = PBXGroup;
 			children = (
+				CE0E9EFE1FEA2E9600CEF8EE /* Serializations */,
 				CE0E9EF91FEA2B9000CEF8EE /* Error */,
 				CE0E9EEE1FEA27A800CEF8EE /* DataParser */,
 				CE0E9EE21FEA1F5700CEF8EE /* BodyParameters */,
@@ -533,6 +550,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0E9EFB1FEA2B9C00CEF8EE /* RequestError.swift in Sources */,
+				CE0E9F001FEA2EAD00CEF8EE /* URLEncodeedSerialization.swift in Sources */,
 				CE0E9EF61FEA299200CEF8EE /* FormURLEncodeDataParser.swift in Sources */,
 				CE0E9EF41FEA28DF00CEF8EE /* StringDataParser.swift in Sources */,
 				CE0E9EE41FEA1F9500CEF8EE /* AbstractInputStream.m in Sources */,
@@ -544,7 +562,9 @@
 				CE0E9EE61FEA209200CEF8EE /* BodyParameters.swift in Sources */,
 				CE0E9EE81FEA20EE00CEF8EE /* ProtobufBodyParameters.swift in Sources */,
 				CE0E9EF81FEA2B4900CEF8EE /* ProtobufDataParser.swift in Sources */,
+				CE0E9EFD1FEA2D9000CEF8EE /* ResponseError.swift in Sources */,
 				CE0E9EDB1FEA177E00CEF8EE /* CallbackQueue.swift in Sources */,
+				CE0E9F021FEA340600CEF8EE /* SessionTaskError.swift in Sources */,
 				CE0E9EF01FEA27BA00CEF8EE /* DataParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
