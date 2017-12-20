@@ -21,6 +21,7 @@
 		CE0E9EF41FEA28DF00CEF8EE /* StringDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9EF31FEA28DF00CEF8EE /* StringDataParser.swift */; };
 		CE0E9EF61FEA299200CEF8EE /* FormURLEncodeDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9EF51FEA299200CEF8EE /* FormURLEncodeDataParser.swift */; };
 		CE0E9EF81FEA2B4900CEF8EE /* ProtobufDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9EF71FEA2B4900CEF8EE /* ProtobufDataParser.swift */; };
+		CE0E9EFB1FEA2B9C00CEF8EE /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9EFA1FEA2B9C00CEF8EE /* RequestError.swift */; };
 		CE62603D1FEA07A300E143C7 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6260341FEA07A300E143C7 /* APIKit.framework */; };
 		CE6260441FEA07A300E143C7 /* APIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6260431FEA07A300E143C7 /* APIKitTests.swift */; };
 		CE6260461FEA07A300E143C7 /* APIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6260361FEA07A300E143C7 /* APIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -102,6 +103,7 @@
 		CE0E9EF31FEA28DF00CEF8EE /* StringDataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringDataParser.swift; sourceTree = "<group>"; };
 		CE0E9EF51FEA299200CEF8EE /* FormURLEncodeDataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormURLEncodeDataParser.swift; sourceTree = "<group>"; };
 		CE0E9EF71FEA2B4900CEF8EE /* ProtobufDataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufDataParser.swift; sourceTree = "<group>"; };
+		CE0E9EFA1FEA2B9C00CEF8EE /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		CE6260341FEA07A300E143C7 /* APIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = APIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6260361FEA07A300E143C7 /* APIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKit.h; sourceTree = "<group>"; };
 		CE6260371FEA07A300E143C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -191,9 +193,18 @@
 			path = DataParser;
 			sourceTree = "<group>";
 		};
+		CE0E9EF91FEA2B9000CEF8EE /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				CE0E9EFA1FEA2B9C00CEF8EE /* RequestError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		CE6260351FEA07A300E143C7 /* APIKit */ = {
 			isa = PBXGroup;
 			children = (
+				CE0E9EF91FEA2B9000CEF8EE /* Error */,
 				CE0E9EEE1FEA27A800CEF8EE /* DataParser */,
 				CE0E9EE21FEA1F5700CEF8EE /* BodyParameters */,
 				CE6260361FEA07A300E143C7 /* APIKit.h */,
@@ -521,6 +532,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0E9EFB1FEA2B9C00CEF8EE /* RequestError.swift in Sources */,
 				CE0E9EF61FEA299200CEF8EE /* FormURLEncodeDataParser.swift in Sources */,
 				CE0E9EF41FEA28DF00CEF8EE /* StringDataParser.swift in Sources */,
 				CE0E9EE41FEA1F9500CEF8EE /* AbstractInputStream.m in Sources */,
