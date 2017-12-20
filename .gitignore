@@ -1,0 +1,8 @@
+# Xcode
+
+build/
+*.pbxuser
+!default.pbxuser
+DerivedData
+
+*.DS_Store
