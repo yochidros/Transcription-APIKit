@@ -49,6 +49,16 @@
                ReferencedContainer = "container:Transcription-APIKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CE62603B1FEA07A300E143C7"
+               BuildableName = "APIKitTests.xctest"
+               BlueprintName = "APIKitTests"
+               ReferencedContainer = "container:Transcription-APIKit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
