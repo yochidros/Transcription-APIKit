@@ -25,6 +25,10 @@
 		CE0E9EFD1FEA2D9000CEF8EE /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9EFC1FEA2D9000CEF8EE /* ResponseError.swift */; };
 		CE0E9F001FEA2EAD00CEF8EE /* URLEncodeedSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9EFF1FEA2EAD00CEF8EE /* URLEncodeedSerialization.swift */; };
 		CE0E9F021FEA340600CEF8EE /* SessionTaskError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9F011FEA340600CEF8EE /* SessionTaskError.swift */; };
+		CE0E9F031FEA39C200CEF8EE /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6260531FEA0A5700E143C7 /* Result.framework */; };
+		CE0E9F061FEA39EF00CEF8EE /* SessionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9F051FEA39EF00CEF8EE /* SessionAdapter.swift */; };
+		CE0E9F081FEA3A7D00CEF8EE /* URLSessionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9F071FEA3A7D00CEF8EE /* URLSessionAdapter.swift */; };
+		CE0E9F0A1FEA3E1C00CEF8EE /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9F091FEA3E1C00CEF8EE /* Session.swift */; };
 		CE62603D1FEA07A300E143C7 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6260341FEA07A300E143C7 /* APIKit.framework */; };
 		CE6260441FEA07A300E143C7 /* APIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6260431FEA07A300E143C7 /* APIKitTests.swift */; };
 		CE6260461FEA07A300E143C7 /* APIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6260361FEA07A300E143C7 /* APIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -110,6 +114,9 @@
 		CE0E9EFC1FEA2D9000CEF8EE /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		CE0E9EFF1FEA2EAD00CEF8EE /* URLEncodeedSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEncodeedSerialization.swift; sourceTree = "<group>"; };
 		CE0E9F011FEA340600CEF8EE /* SessionTaskError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTaskError.swift; sourceTree = "<group>"; };
+		CE0E9F051FEA39EF00CEF8EE /* SessionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionAdapter.swift; sourceTree = "<group>"; };
+		CE0E9F071FEA3A7D00CEF8EE /* URLSessionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionAdapter.swift; sourceTree = "<group>"; };
+		CE0E9F091FEA3E1C00CEF8EE /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		CE6260341FEA07A300E143C7 /* APIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = APIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6260361FEA07A300E143C7 /* APIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKit.h; sourceTree = "<group>"; };
 		CE6260371FEA07A300E143C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -145,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0E9F031FEA39C200CEF8EE /* Result.framework in Frameworks */,
 				CE62603D1FEA07A300E143C7 /* APIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,9 +225,19 @@
 			path = Serializations;
 			sourceTree = "<group>";
 		};
+		CE0E9F041FEA39D700CEF8EE /* SessionAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				CE0E9F051FEA39EF00CEF8EE /* SessionAdapter.swift */,
+				CE0E9F071FEA3A7D00CEF8EE /* URLSessionAdapter.swift */,
+			);
+			path = SessionAdapter;
+			sourceTree = "<group>";
+		};
 		CE6260351FEA07A300E143C7 /* APIKit */ = {
 			isa = PBXGroup;
 			children = (
+				CE0E9F041FEA39D700CEF8EE /* SessionAdapter */,
 				CE0E9EFE1FEA2E9600CEF8EE /* Serializations */,
 				CE0E9EF91FEA2B9000CEF8EE /* Error */,
 				CE0E9EEE1FEA27A800CEF8EE /* DataParser */,
@@ -229,6 +247,7 @@
 				CE0E9EDA1FEA177E00CEF8EE /* CallbackQueue.swift */,
 				CE0E9EDC1FEA1C8100CEF8EE /* HTTPMethod.swift */,
 				CE0E9EDE1FEA1DE900CEF8EE /* Request.swift */,
+				CE0E9F091FEA3E1C00CEF8EE /* Session.swift */,
 			);
 			path = APIKit;
 			sourceTree = "<group>";
@@ -549,6 +568,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0E9F0A1FEA3E1C00CEF8EE /* Session.swift in Sources */,
 				CE0E9EFB1FEA2B9C00CEF8EE /* RequestError.swift in Sources */,
 				CE0E9F001FEA2EAD00CEF8EE /* URLEncodeedSerialization.swift in Sources */,
 				CE0E9EF61FEA299200CEF8EE /* FormURLEncodeDataParser.swift in Sources */,
@@ -557,6 +577,8 @@
 				CE0E9EDD1FEA1C8100CEF8EE /* HTTPMethod.swift in Sources */,
 				CE0E9EED1FEA248500CEF8EE /* Data+InputStream.swift in Sources */,
 				CE0E9EDF1FEA1DE900CEF8EE /* Request.swift in Sources */,
+				CE0E9F081FEA3A7D00CEF8EE /* URLSessionAdapter.swift in Sources */,
+				CE0E9F061FEA39EF00CEF8EE /* SessionAdapter.swift in Sources */,
 				CE0E9EF21FEA285F00CEF8EE /* JSONDataParser.swift in Sources */,
 				CE0E9EEB1FEA23A900CEF8EE /* JSONBodyParameters.swift in Sources */,
 				CE0E9EE61FEA209200CEF8EE /* BodyParameters.swift in Sources */,
@@ -717,6 +739,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X25KZ54NYC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = APIKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yochio.APIKitTests;
@@ -733,6 +759,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X25KZ54NYC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = APIKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yochio.APIKitTests;
