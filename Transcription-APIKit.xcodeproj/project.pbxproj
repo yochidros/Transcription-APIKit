@@ -12,6 +12,7 @@
 		CE6260461FEA07A300E143C7 /* APIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6260361FEA07A300E143C7 /* APIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE6260491FEA07A300E143C7 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6260341FEA07A300E143C7 /* APIKit.framework */; };
 		CE62604A1FEA07A300E143C7 /* APIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE6260341FEA07A300E143C7 /* APIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE6260551FEA0A9300E143C7 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6260531FEA0A5700E143C7 /* Result.framework */; };
 		CE767A091FE9F9FC0000B5BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE767A081FE9F9FC0000B5BC /* AppDelegate.swift */; };
 		CE767A0B1FE9F9FC0000B5BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE767A0A1FE9F9FC0000B5BC /* ViewController.swift */; };
 		CE767A0E1FE9F9FC0000B5BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE767A0C1FE9F9FC0000B5BC /* Main.storyboard */; };
@@ -80,6 +81,7 @@
 		CE62603C1FEA07A300E143C7 /* APIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6260431FEA07A300E143C7 /* APIKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKitTests.swift; sourceTree = "<group>"; };
 		CE6260451FEA07A300E143C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE6260531FEA0A5700E143C7 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		CE767A051FE9F9FB0000B5BC /* Transcription-APIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Transcription-APIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE767A081FE9F9FC0000B5BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE767A0A1FE9F9FC0000B5BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE6260551FEA0A9300E143C7 /* Result.framework in Frameworks */,
 				CE6260491FEA07A300E143C7 /* APIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,6 +166,7 @@
 				CE6260351FEA07A300E143C7 /* APIKit */,
 				CE6260421FEA07A300E143C7 /* APIKitTests */,
 				CE767A061FE9F9FB0000B5BC /* Products */,
+				E1F153F46487B34121A250F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -207,6 +211,14 @@
 				CE767A2A1FE9F9FC0000B5BC /* Info.plist */,
 			);
 			path = "Transcription-APIKitUITests";
+			sourceTree = "<group>";
+		};
+		E1F153F46487B34121A250F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE6260531FEA0A5700E143C7 /* Result.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +280,7 @@
 				CE767A021FE9F9FB0000B5BC /* Frameworks */,
 				CE767A031FE9F9FB0000B5BC /* Resources */,
 				CE62604E1FEA07A300E143C7 /* Embed Frameworks */,
+				CE6260521FEA09E900E143C7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -412,6 +425,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CE6260521FEA09E900E143C7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE62602F1FEA07A300E143C7 /* Sources */ = {
@@ -698,6 +728,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X25KZ54NYC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Transcription-APIKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "yochio.Transcription-APIKit";
@@ -715,6 +749,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X25KZ54NYC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Transcription-APIKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "yochio.Transcription-APIKit";
