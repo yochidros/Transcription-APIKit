@@ -17,6 +17,7 @@
 		CE0E9EEB1FEA23A900CEF8EE /* JSONBodyParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9EEA1FEA23A900CEF8EE /* JSONBodyParameters.swift */; };
 		CE0E9EED1FEA248500CEF8EE /* Data+InputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9EEC1FEA248500CEF8EE /* Data+InputStream.swift */; };
 		CE0E9EF01FEA27BA00CEF8EE /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9EEF1FEA27BA00CEF8EE /* DataParser.swift */; };
+		CE0E9EF21FEA285F00CEF8EE /* JSONDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9EF11FEA285F00CEF8EE /* JSONDataParser.swift */; };
 		CE62603D1FEA07A300E143C7 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6260341FEA07A300E143C7 /* APIKit.framework */; };
 		CE6260441FEA07A300E143C7 /* APIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6260431FEA07A300E143C7 /* APIKitTests.swift */; };
 		CE6260461FEA07A300E143C7 /* APIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6260361FEA07A300E143C7 /* APIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -94,6 +95,7 @@
 		CE0E9EEA1FEA23A900CEF8EE /* JSONBodyParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONBodyParameters.swift; sourceTree = "<group>"; };
 		CE0E9EEC1FEA248500CEF8EE /* Data+InputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+InputStream.swift"; sourceTree = "<group>"; };
 		CE0E9EEF1FEA27BA00CEF8EE /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		CE0E9EF11FEA285F00CEF8EE /* JSONDataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataParser.swift; sourceTree = "<group>"; };
 		CE6260341FEA07A300E143C7 /* APIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = APIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6260361FEA07A300E143C7 /* APIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKit.h; sourceTree = "<group>"; };
 		CE6260371FEA07A300E143C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				CE0E9EEF1FEA27BA00CEF8EE /* DataParser.swift */,
+				CE0E9EF11FEA285F00CEF8EE /* JSONDataParser.swift */,
 			);
 			path = DataParser;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				CE0E9EDD1FEA1C8100CEF8EE /* HTTPMethod.swift in Sources */,
 				CE0E9EED1FEA248500CEF8EE /* Data+InputStream.swift in Sources */,
 				CE0E9EDF1FEA1DE900CEF8EE /* Request.swift in Sources */,
+				CE0E9EF21FEA285F00CEF8EE /* JSONDataParser.swift in Sources */,
 				CE0E9EEB1FEA23A900CEF8EE /* JSONBodyParameters.swift in Sources */,
 				CE0E9EE61FEA209200CEF8EE /* BodyParameters.swift in Sources */,
 				CE0E9EE81FEA20EE00CEF8EE /* ProtobufBodyParameters.swift in Sources */,
