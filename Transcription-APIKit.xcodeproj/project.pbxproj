@@ -34,6 +34,7 @@
 		CE0E9F151FEA502A00CEF8EE /* JSONBodyParametersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9F141FEA502A00CEF8EE /* JSONBodyParametersTests.swift */; };
 		CE0E9F181FEA667A00CEF8EE /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6260341FEA07A300E143C7 /* APIKit.framework */; };
 		CE0E9F191FEA667A00CEF8EE /* APIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE6260341FEA07A300E143C7 /* APIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE0E9F1D1FEA69C400CEF8EE /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6260531FEA0A5700E143C7 /* Result.framework */; };
 		CE62603D1FEA07A300E143C7 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6260341FEA07A300E143C7 /* APIKit.framework */; };
 		CE6260441FEA07A300E143C7 /* APIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6260431FEA07A300E143C7 /* APIKitTests.swift */; };
 		CE6260461FEA07A300E143C7 /* APIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6260361FEA07A300E143C7 /* APIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -166,6 +167,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0E9F1D1FEA69C400CEF8EE /* Result.framework in Frameworks */,
 				CE0E9F181FEA667A00CEF8EE /* APIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
