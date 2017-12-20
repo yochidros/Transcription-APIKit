@@ -19,6 +19,7 @@ public enum HTTPMethod: String {
     case options = "OPTIONS"
     case connect = "CONNECT"
     
+    // query parametersが満たされているかどうか
     public var prefersQueryParameters: Bool {
         switch self {
         case .get, .head, .delete:
