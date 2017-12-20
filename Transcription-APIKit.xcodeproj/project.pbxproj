@@ -29,6 +29,9 @@
 		CE0E9F061FEA39EF00CEF8EE /* SessionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9F051FEA39EF00CEF8EE /* SessionAdapter.swift */; };
 		CE0E9F081FEA3A7D00CEF8EE /* URLSessionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9F071FEA3A7D00CEF8EE /* URLSessionAdapter.swift */; };
 		CE0E9F0A1FEA3E1C00CEF8EE /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9F091FEA3E1C00CEF8EE /* Session.swift */; };
+		CE0E9F0C1FEA425900CEF8EE /* Unavailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9F0B1FEA425900CEF8EE /* Unavailable.swift */; };
+		CE0E9F0F1FEA488A00CEF8EE /* TestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9F0E1FEA488A00CEF8EE /* TestRequest.swift */; };
+		CE0E9F151FEA502A00CEF8EE /* JSONBodyParametersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E9F141FEA502A00CEF8EE /* JSONBodyParametersTests.swift */; };
 		CE62603D1FEA07A300E143C7 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6260341FEA07A300E143C7 /* APIKit.framework */; };
 		CE6260441FEA07A300E143C7 /* APIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6260431FEA07A300E143C7 /* APIKitTests.swift */; };
 		CE6260461FEA07A300E143C7 /* APIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6260361FEA07A300E143C7 /* APIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -117,6 +120,9 @@
 		CE0E9F051FEA39EF00CEF8EE /* SessionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionAdapter.swift; sourceTree = "<group>"; };
 		CE0E9F071FEA3A7D00CEF8EE /* URLSessionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionAdapter.swift; sourceTree = "<group>"; };
 		CE0E9F091FEA3E1C00CEF8EE /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		CE0E9F0B1FEA425900CEF8EE /* Unavailable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unavailable.swift; sourceTree = "<group>"; };
+		CE0E9F0E1FEA488A00CEF8EE /* TestRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRequest.swift; sourceTree = "<group>"; };
+		CE0E9F141FEA502A00CEF8EE /* JSONBodyParametersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONBodyParametersTests.swift; sourceTree = "<group>"; };
 		CE6260341FEA07A300E143C7 /* APIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = APIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6260361FEA07A300E143C7 /* APIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKit.h; sourceTree = "<group>"; };
 		CE6260371FEA07A300E143C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -234,6 +240,22 @@
 			path = SessionAdapter;
 			sourceTree = "<group>";
 		};
+		CE0E9F0D1FEA487700CEF8EE /* TestComponents */ = {
+			isa = PBXGroup;
+			children = (
+				CE0E9F0E1FEA488A00CEF8EE /* TestRequest.swift */,
+			);
+			path = TestComponents;
+			sourceTree = "<group>";
+		};
+		CE0E9F131FEA500D00CEF8EE /* BodyParametersType */ = {
+			isa = PBXGroup;
+			children = (
+				CE0E9F141FEA502A00CEF8EE /* JSONBodyParametersTests.swift */,
+			);
+			path = BodyParametersType;
+			sourceTree = "<group>";
+		};
 		CE6260351FEA07A300E143C7 /* APIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +270,7 @@
 				CE0E9EDC1FEA1C8100CEF8EE /* HTTPMethod.swift */,
 				CE0E9EDE1FEA1DE900CEF8EE /* Request.swift */,
 				CE0E9F091FEA3E1C00CEF8EE /* Session.swift */,
+				CE0E9F0B1FEA425900CEF8EE /* Unavailable.swift */,
 			);
 			path = APIKit;
 			sourceTree = "<group>";
@@ -255,6 +278,8 @@
 		CE6260421FEA07A300E143C7 /* APIKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				CE0E9F131FEA500D00CEF8EE /* BodyParametersType */,
+				CE0E9F0D1FEA487700CEF8EE /* TestComponents */,
 				CE6260431FEA07A300E143C7 /* APIKitTests.swift */,
 				CE6260451FEA07A300E143C7 /* Info.plist */,
 			);
@@ -584,6 +609,7 @@
 				CE0E9EE61FEA209200CEF8EE /* BodyParameters.swift in Sources */,
 				CE0E9EE81FEA20EE00CEF8EE /* ProtobufBodyParameters.swift in Sources */,
 				CE0E9EF81FEA2B4900CEF8EE /* ProtobufDataParser.swift in Sources */,
+				CE0E9F0C1FEA425900CEF8EE /* Unavailable.swift in Sources */,
 				CE0E9EFD1FEA2D9000CEF8EE /* ResponseError.swift in Sources */,
 				CE0E9EDB1FEA177E00CEF8EE /* CallbackQueue.swift in Sources */,
 				CE0E9F021FEA340600CEF8EE /* SessionTaskError.swift in Sources */,
@@ -596,6 +622,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6260441FEA07A300E143C7 /* APIKitTests.swift in Sources */,
+				CE0E9F0F1FEA488A00CEF8EE /* TestRequest.swift in Sources */,
+				CE0E9F151FEA502A00CEF8EE /* JSONBodyParametersTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
