@@ -182,6 +182,8 @@
 			children = (
 				CE0E9EEF1FEA27BA00CEF8EE /* DataParser.swift */,
 				CE0E9EF11FEA285F00CEF8EE /* JSONDataParser.swift */,
+				CE0E9EF31FEA28DF00CEF8EE /* StringDataParser.swift */,
+				CE0E9EF51FEA299200CEF8EE /* FormURLEncodeDataParser.swift */,
 			);
 			path = DataParser;
 			sourceTree = "<group>";
@@ -212,8 +214,6 @@
 		CE7679FC1FE9F9FB0000B5BC = {
 			isa = PBXGroup;
 			children = (
-				CE0E9EF31FEA28DF00CEF8EE /* StringDataParser.swift */,
-				CE0E9EF51FEA299200CEF8EE /* FormURLEncodeDataParser.swift */,
 				CE767A071FE9F9FB0000B5BC /* Transcription-APIKit */,
 				CE767A1C1FE9F9FC0000B5BC /* Transcription-APIKitTests */,
 				CE767A271FE9F9FC0000B5BC /* Transcription-APIKitUITests */,
